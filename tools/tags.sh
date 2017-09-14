@@ -19,7 +19,8 @@ sudo su -c "echo 'deb http://ppa.launchpad.net/git-core/ppa/ubuntu trusty main' 
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E1DF1F24
 sudo apt-get update && sudo apt-get install git
 # Bypassing manual host checking
-mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tHostName github.com\n\tUser auto-git" > ~/.ssh/config
+#mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tHostName github.com\n\tUser auto-git" > ~/.ssh/config
+#mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
 
 # Removing latest tag
 if ! git rev-parse latest; then
