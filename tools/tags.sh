@@ -22,6 +22,8 @@ sudo apt-get update && sudo apt-get install git
 #mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tHostName github.com\n\tUser auto-git" > ~/.ssh/config
 #mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
 
+
+
 # Removing latest tag
 if ! git rev-parse latest; then
     echo "warning: latest tag doesn't exist"
