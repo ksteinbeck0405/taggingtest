@@ -21,11 +21,7 @@ sudo apt-get update && sudo apt-get install git
 # Bypassing manual host checking
 #mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tHostName github.com\n\tUser auto-git" > ~/.ssh/config
 #mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-
-
-
-
-
+# adding comment
 
 # Removing latest tag
 if ! git rev-parse latest; then
