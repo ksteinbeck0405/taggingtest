@@ -1,0 +1,19 @@
+version: 2
+jobs:
+    build:
+      working_directory: ~/circleci-taggingtest
+      docker:
+        - image: circleci/node:6.11.0
+      steps:
+        - checkout
+        - run:
+            name: build
+            command: |
+              mkdir -p tmp/logs
+              ./tools/tags.sh 2> tmp/logs/tag.err.log
+
+workflows:
+    version: 2
+    build_and_deploy:
+      jobs:
+        - build
